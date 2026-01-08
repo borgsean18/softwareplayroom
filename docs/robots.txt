@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://breakroom.app/sitemap.xml
+Sitemap: https://softwareplayroom.com/sitemap.xml
 

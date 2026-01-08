@@ -10,6 +10,7 @@
     nav.dataset.open = String(isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
     if (isOpen) {
+      // focus first link for keyboard users
       const firstLink = nav.querySelector("a");
       firstLink?.focus?.();
     } else {
@@ -44,35 +45,6 @@
       const t = e.target;
       if (!(t instanceof HTMLElement)) return;
       if (t.closest("a")) setNavOpen(false);
-    });
-  }
-
-  // Copy email
-  const copyBtn = document.querySelector("[data-copy-email]");
-  if (copyBtn instanceof HTMLButtonElement) {
-    copyBtn.addEventListener("click", async () => {
-      const value = copyBtn.getAttribute("data-copy-value") ?? "";
-      if (!value) return;
-      try {
-        await navigator.clipboard.writeText(value);
-        const prev = copyBtn.textContent;
-        copyBtn.textContent = "Copied";
-        copyBtn.disabled = true;
-        window.setTimeout(() => {
-          copyBtn.textContent = prev ?? "Copy";
-          copyBtn.disabled = false;
-        }, 1100);
-      } catch {
-        // Fallback: select the mailto link text for manual copy
-        const emailLink = document.querySelector("[data-email-link]");
-        if (emailLink instanceof HTMLElement) {
-          const range = document.createRange();
-          range.selectNodeContents(emailLink);
-          const sel = window.getSelection();
-          sel?.removeAllRanges();
-          sel?.addRange(range);
-        }
-      }
     });
   }
 

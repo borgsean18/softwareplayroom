@@ -3,40 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0B0F19" />
-    <title>Breakroom — Coordinate free time with friends</title>
+    <meta name="theme-color" content="#FBF7F1" />
+
+    <title>Software Playroom — thoughtful software, playful craft</title>
     <meta
       name="description"
-      content="Breakroom helps you coordinate time with friends by comparing availability. A dark, glassy timetable + matching experience built for speed and clarity."
+      content="Software Playroom builds delightful apps with great UX. Explore our projects, including Breakroom — an app to coordinate free time with friends."
     />
 
-    <meta property="og:title" content="Breakroom" />
-    <meta property="og:description" content="Coordinate free time with friends — quickly, beautifully, privately." />
+    <meta property="og:title" content="Software Playroom" />
+    <meta property="og:description" content="Thoughtful software, playful craft. Explore our projects — including Breakroom." />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="bg-ambient">
+  <body class="bg-studio" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="topbar" role="banner">
       <div class="container topbar-inner">
-        <a class="brand" href="./index.html" aria-label="Breakroom home">
+        <a class="brand" href="#top" aria-label="Software Playroom home">
           <span class="brand-mark" aria-hidden="true">
-            <!-- simple spark mark -->
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
-                d="M12 2l1.4 5.2L19 8.6l-5.2 1.4L12 15.3 10.6 10 5.4 8.6l5.2-1.4L12 2Z"
-                fill="rgba(11,15,25,0.95)"
+                d="M12 2c3.9 0 7 3.1 7 7 0 4.8-5.6 11.2-7 13-1.4-1.8-7-8.2-7-13 0-3.9 3.1-7 7-7Z"
+                fill="currentColor"
+                opacity="0.92"
               />
               <path
-                d="M18.8 12.4l.8 3-3 .8 3 .8-.8 3-.8-3-3-.8 3-.8.8-3Z"
-                fill="rgba(11,15,25,0.9)"
-                opacity="0.9"
+                d="M8.6 9.4c.8-1.6 2.1-2.4 3.4-2.4 1.3 0 2.6.8 3.4 2.4"
+                stroke="rgba(251,247,241,0.95)"
+                stroke-width="2"
+                stroke-linecap="round"
               />
             </svg>
           </span>
-          <span class="brand-name">Breakroom</span>
+          <span class="brand-name">Software Playroom</span>
         </a>
 
         <button class="nav-toggle" type="button" aria-controls="site-nav" data-nav-toggle>
@@ -49,38 +51,33 @@
         </button>
 
         <nav class="nav" id="site-nav" aria-label="Primary navigation" data-nav data-open="false">
-          <a href="./index.html" aria-current="page">Home</a>
-          <a href="./privacy.html">Privacy</a>
+          <a href="#top" aria-current="page">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="section">
-        <div class="container grid-2">
+      <section class="section hero">
+        <div class="container hero-grid">
           <div class="reveal">
             <span class="eyebrow">
-              <span aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="width: 16px; height: 16px">
-                  <path
-                    d="M12 3l1.8 6.6L20.4 12l-6.6 1.8L12 20.4l-1.8-6.6L3.6 12l6.6-2.4L12 3Z"
-                    fill="rgba(124,92,255,0.9)"
-                  />
-                </svg>
-              </span>
-              Dark, glassy, built for coordination
+              <span class="dot" aria-hidden="true"></span>
+              Thoughtful software, playful craft
             </span>
             <h1 class="h1">
-              Make time for friends — <span class="gradient-text">without the back‑and‑forth</span>.
+              We build apps that feel <span class="accent">calm</span>, <span class="accent">human</span>, and
+              <span class="accent">fast</span>.
             </h1>
             <p class="lead">
-              Breakroom helps you coordinate free time by turning availability into something you can actually act on:
-              clean busy blocks, friendly matching, and a weekly view that stays readable.
+              Software Playroom is a small studio focused on great UX: clear flows, intentional details, and interfaces
+              that don’t fight you.
             </p>
 
             <div class="actions">
-              <a class="btn primary" href="#get-the-app">
-                Get the app
+              <a class="btn primary" href="#projects">
+                View projects
                 <span aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" style="width: 18px; height: 18px">
                     <path d="M5 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -88,340 +85,146 @@
                   </svg>
                 </span>
               </a>
-              <a class="btn secondary" href="./privacy.html">
-                Read our privacy policy
-                <span aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" style="width: 18px; height: 18px">
-                    <path
-                      d="M12 3l7 4v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                    <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                </span>
-              </a>
-              <a class="btn ghost" href="#how-it-works">How it works</a>
+              <a class="btn secondary" href="#contact">Contact us</a>
+              <a class="btn ghost" href="/breakroom/">Open Breakroom</a>
             </div>
 
             <div class="kpi-row">
               <div class="kpi">
-                <strong>Fast matching</strong>
-                <span>Find who’s free in a time range.</span>
+                <strong>UX-first</strong>
+                <span>Clear interaction patterns, accessible defaults.</span>
               </div>
               <div class="kpi">
-                <strong>Glass UI</strong>
-                <span>Dark surfaces, soft borders, clean contrast.</span>
+                <strong>Crafted</strong>
+                <span>Polished typography, spacing, and motion.</span>
               </div>
             </div>
           </div>
 
           <div class="reveal">
-            <div class="card card-pad">
-              <h2 class="h2" style="margin-top: 0">A weekly view that stays readable</h2>
-              <p class="muted" style="margin: 0">
-                Busy blocks are clear, consistent, and designed for real schedules — including overlaps.
+            <div class="paper-card paper-pad">
+              <div class="paper-top">
+                <div class="tag">Now building</div>
+                <div class="stamp" aria-hidden="true">SP</div>
+              </div>
+              <h2 class="h2" style="margin-top: 14px">Breakroom</h2>
+              <p class="muted" style="margin: 10px 0 0">
+                Coordinate free time with friends by comparing availability. Built to stay readable and reduce
+                back‑and‑forth.
               </p>
 
-              <div style="margin-top: 16px; display: grid; gap: 12px">
-                <div class="card-soft" style="padding: 14px; border-radius: 16px">
-                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-                    <div>
-                      <div style="font-weight: 700; letter-spacing: -0.01em">Lecture</div>
-                      <div class="dim" style="font-size: 13px">Tue • 10:00–11:30</div>
-                    </div>
-                    <div
-                      aria-hidden="true"
-                      style="
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 16px;
-                        background: rgba(124, 92, 255, 0.18);
-                        border: 1px solid rgba(124, 92, 255, 0.25);
-                        display: grid;
-                        place-items: center;
-                      "
-                    >
-                      <svg viewBox="0 0 24 24" fill="none" style="width: 20px; height: 20px; color: rgba(124, 92, 255, 0.95)">
-                        <path
-                          d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        />
-                        <path d="M8 9h8M8 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+              <ul class="bullets" aria-label="Breakroom highlights">
+                <li>Fast matching in a time range</li>
+                <li>Clean weekly view</li>
+                <li>Designed for speed and clarity</li>
+              </ul>
 
-                <div class="card-soft" style="padding: 14px; border-radius: 16px">
-                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-                    <div>
-                      <div style="font-weight: 700; letter-spacing: -0.01em">Gym</div>
-                      <div class="dim" style="font-size: 13px">Thu • 6:30–7:30</div>
-                    </div>
-                    <div
-                      aria-hidden="true"
-                      style="
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 16px;
-                        background: rgba(46, 229, 157, 0.14);
-                        border: 1px solid rgba(46, 229, 157, 0.2);
-                        display: grid;
-                        place-items: center;
-                      "
-                    >
-                      <svg viewBox="0 0 24 24" fill="none" style="width: 20px; height: 20px; color: rgba(46, 229, 157, 0.95)">
-                        <path
-                          d="M6 9v6M18 9v6"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M8 10h8M8 14h8"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M4 10v4M20 10v4"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-soft" style="padding: 14px; border-radius: 16px">
-                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-                    <div>
-                      <div style="font-weight: 700; letter-spacing: -0.01em">Common free time</div>
-                      <div class="dim" style="font-size: 13px">Fri • 2:00–3:00</div>
-                    </div>
-                    <div
-                      aria-hidden="true"
-                      style="
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 16px;
-                        background: rgba(96, 165, 250, 0.14);
-                        border: 1px solid rgba(96, 165, 250, 0.2);
-                        display: grid;
-                        place-items: center;
-                      "
-                    >
-                      <svg viewBox="0 0 24 24" fill="none" style="width: 20px; height: 20px; color: rgba(96, 165, 250, 0.95)">
-                        <path
-                          d="M8 12a4 4 0 1 1 8 0v4a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3v-4Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        />
-                        <path d="M12 9v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+              <div class="actions" style="margin-top: 14px">
+                <a class="btn primary" href="/breakroom/">
+                  Visit project
+                  <span aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" style="width: 18px; height: 18px">
+                      <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      <path d="M10 7h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </a>
+                <a class="btn ghost" href="/breakroom/privacy.html">Privacy</a>
               </div>
+
+              <p class="fineprint" style="margin: 12px 0 0">
+                Tip: this company site has a warm “studio” look, while Breakroom has its own distinct style.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="how-it-works">
+      <section class="section" id="projects">
         <div class="container">
           <div class="reveal">
-            <h2 class="h2">How Breakroom works</h2>
-            <p class="muted" style="margin: 0; max-width: 70ch">
-              Add your busy time (or import it), connect with friends, and ask a simple question: “who’s free?”
+            <h2 class="h2">Projects</h2>
+            <p class="muted" style="margin: 0; max-width: 74ch">
+              We keep the list short and high-quality. Each project is a deliberate product with a clear user promise.
             </p>
           </div>
 
-          <div class="steps">
-            <div class="card step reveal">
-              <div class="card-pad">
-                <div class="badge-num">1</div>
-                <h3 class="h3">Set your timetable</h3>
-                <p class="muted" style="margin: 0">
-                  Create busy blocks with optional names and timezone support. Keep it minimal, keep it accurate.
-                </p>
+          <div class="project-grid">
+            <article class="project-card reveal" aria-label="Breakroom project">
+              <div class="project-head">
+                <div>
+                  <div class="project-name">Breakroom</div>
+                  <div class="project-subtitle">Coordinate free time with friends</div>
+                </div>
+                <span class="chip">App</span>
               </div>
-            </div>
-            <div class="card step reveal">
-              <div class="card-pad">
-                <div class="badge-num">2</div>
-                <h3 class="h3">Add friends</h3>
-                <p class="muted" style="margin: 0">
-                  Send requests, accept, and manage connections. Matching only gets better as your circle grows.
-                </p>
+
+              <p class="muted" style="margin: 10px 0 0">
+                A focused app for comparing availability. Designed to reduce coordination friction and make plans easier
+                to say yes to.
+              </p>
+
+              <div class="project-actions">
+                <a class="btn primary" href="/breakroom/">Open Breakroom</a>
+                <a class="btn secondary" href="/breakroom/privacy.html">Privacy</a>
               </div>
-            </div>
-            <div class="card step reveal">
-              <div class="card-pad">
-                <div class="badge-num">3</div>
-                <h3 class="h3">Find common time</h3>
-                <p class="muted" style="margin: 0">
-                  Pick a time range and see who’s free — with clear time windows you can actually schedule.
-                </p>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="contact">
         <div class="container">
           <div class="reveal">
-            <h2 class="h2">Features that feel like the app</h2>
+            <h2 class="h2">Contact</h2>
             <p class="muted" style="margin: 0; max-width: 72ch">
-              Dark surfaces, soft borders, and glass cards — with the UX focused on clarity and speed.
+              Want to collaborate, ask about Breakroom, or share feedback? Send a note — we read every message.
             </p>
           </div>
 
-          <div class="feature-grid">
-            <article class="card feature reveal">
-              <div class="icon primary" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="color: rgba(124, 92, 255, 0.95)">
-                  <path
-                    d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path d="M8 9h8M8 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
+          <div class="contact-grid">
+            <div class="paper-card paper-pad reveal">
+              <div class="contact-row">
+                <div>
+                  <div class="contact-label">Email</div>
+                  <a class="contact-link" href="mailto:hello@softwareplayroom.com" data-email-link>
+                    hello@softwareplayroom.com
+                  </a>
+                </div>
+                <button class="btn secondary copy-btn" type="button" data-copy-email data-copy-value="hello@softwareplayroom.com">
+                  Copy
+                </button>
               </div>
-              <h3 class="h3">Busy blocks</h3>
-              <p class="muted" style="margin: 0">Named blocks, overlaps, and a weekly view that stays readable.</p>
-            </article>
+              <p class="fineprint" style="margin: 12px 0 0">
+                If you’re contacting us about Breakroom, include “Breakroom” in the subject for faster routing.
+              </p>
+            </div>
 
-            <article class="card feature reveal">
-              <div class="icon tertiary" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="color: rgba(96, 165, 250, 0.95)">
-                  <path
-                    d="M4 7h16M4 17h16M7 4v16M17 4v16"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path d="M9.5 10h5v4h-5z" stroke="currentColor" stroke-width="2" />
-                </svg>
-              </div>
-              <h3 class="h3">Weekly calendar grid</h3>
-              <p class="muted" style="margin: 0">A fast visual overview of your week, designed for real schedules.</p>
-            </article>
-
-            <article class="card feature reveal">
-              <div class="icon secondary" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="color: rgba(46, 229, 157, 0.95)">
-                  <path
-                    d="M16 11a4 4 0 1 0-8 0v1a4 4 0 0 0 8 0v-1Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M4 20a8 8 0 0 1 16 0"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-              <h3 class="h3">Friends & requests</h3>
-              <p class="muted" style="margin: 0">Connect by email and keep matching to people you actually know.</p>
-            </article>
-
-            <article class="card feature reveal">
-              <div class="icon primary" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="color: rgba(124, 92, 255, 0.95)">
-                  <path
-                    d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </div>
-              <h3 class="h3">Free-time matching</h3>
-              <p class="muted" style="margin: 0">Pick a range and get a clear answer: who’s free, and when.</p>
-            </article>
-
-            <article class="card feature reveal">
-              <div class="icon tertiary" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="color: rgba(96, 165, 250, 0.95)">
-                  <path
-                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path d="M14 2v6h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                  <path d="M8 13h8M8 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </div>
-              <h3 class="h3">.ics import</h3>
-              <p class="muted" style="margin: 0">Upload a calendar file to extract busy time blocks—no manual entry.</p>
-            </article>
-
-            <article class="card feature reveal">
-              <div class="icon secondary" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" style="color: rgba(46, 229, 157, 0.95)">
-                  <path
-                    d="M12 3l7 4v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </div>
-              <h3 class="h3">Privacy-first posture</h3>
-              <p class="muted" style="margin: 0">We aim to collect the minimum needed for core features.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="get-the-app">
-        <div class="container">
-          <div class="card card-pad reveal">
-            <div class="callout">
-              <h2 class="h2" style="margin: 0">Get Breakroom</h2>
-              <p class="muted" style="margin: 0; max-width: 70ch">
-                This website is ready for App Store / Play Store links when you have them. For now, use this section as
-                your launch pad.
+            <div class="paper-card paper-pad reveal">
+              <div class="contact-label">Projects</div>
+              <p class="muted" style="margin: 8px 0 0">
+                Looking for Breakroom? It lives at:
+                <a class="contact-link" href="/breakroom/">softwareplayroom.com/breakroom/</a>
               </p>
               <div class="actions" style="margin-top: 14px">
-                <a class="btn primary" href="#" aria-disabled="true" tabindex="-1">App Store (coming soon)</a>
-                <a class="btn secondary" href="#" aria-disabled="true" tabindex="-1">Google Play (coming soon)</a>
-                <a class="btn ghost" href="./privacy.html">Privacy policy</a>
+                <a class="btn primary" href="/breakroom/">Open Breakroom</a>
+                <a class="btn ghost" href="#projects">Back to projects</a>
               </div>
-              <p class="dim" style="margin: 4px 0 0">
-                Tip: if you’d like, I can add store badges + real links once you have URLs.
-              </p>
+            </div>
+          </div>
+
+          <div class="footer reveal">
+            <div class="footer-inner">
+              <div class="footer-left">
+                <span class="footer-pill">Software Playroom</span>
+                <span class="fineprint">Thoughtful software, playful craft.</span>
+              </div>
+              <div class="footer-right fineprint">© <span id="year"></span> Software Playroom</div>
             </div>
           </div>
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="container footer-grid">
-        <div>
-          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
-            <span class="pill">Breakroom</span>
-            <span class="dim">Coordinate time with friends.</span>
-          </div>
-          <div class="dim" style="margin-top: 10px">
-            Contact: <a class="link" href="mailto:support@breakroom.app">support@breakroom.app</a>
-          </div>
-        </div>
-        <div class="dim" style="text-align: right">
-          <div><a class="link" href="./privacy.html">Privacy Policy</a></div>
-          <div style="margin-top: 8px">© <span id="year"></span> Breakroom</div>
-        </div>
-      </div>
-    </footer>
 
     <script src="./script.js"></script>
     <script>
