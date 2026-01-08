@@ -76,11 +76,12 @@ body {
 .bg-ambient::after {
   content: "";
   position: absolute;
-  inset: -40vmax;
+  inset: -20vmax;
   pointer-events: none;
   filter: blur(26px);
   opacity: 0.38;
   transform: translateZ(0);
+  max-height: 100%;
 }
 
 .bg-ambient::before {

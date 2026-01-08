@@ -68,12 +68,13 @@ body {
 .bg-studio::after {
   content: "";
   position: absolute;
-  inset: -40vmax;
+  inset: -20vmax;
   pointer-events: none;
   filter: blur(28px);
   opacity: 0.85;
   transform: translateZ(0);
   z-index: -1;
+  max-height: 100%;
 }
 
 .bg-studio::before {
