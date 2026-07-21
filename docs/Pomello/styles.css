@@ -1,0 +1,272 @@
+/* Pomello — Privacy Policy page styles */
+:root {
+  --primary: #e8543f;
+  --primary-dark: #c9432f;
+  --accent: #4f9d6e;
+  --bg: #fbf5ef;
+  --surface: #ffffff;
+  --surface-soft: #fff1ea;
+  --border: rgba(43, 27, 20, 0.1);
+  --text: #2b1f19;
+  --muted: rgba(43, 31, 25, 0.7);
+  --dim: rgba(43, 31, 25, 0.52);
+
+  --radius: 16px;
+  --radius-sm: 12px;
+  --maxw: 760px;
+
+  --shadow: 0 10px 30px rgba(59, 32, 20, 0.08);
+
+  --fast: 160ms;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(60vmax 40vmax at 90% -10%, rgba(232, 84, 63, 0.08), transparent 60%),
+    radial-gradient(50vmax 35vmax at -10% 10%, rgba(79, 157, 110, 0.07), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 24px);
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--text);
+  color: #fff;
+  transform: translateY(-200%);
+  transition: transform var(--fast) var(--ease);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Header */
+.topbar {
+  border-bottom: 1px solid var(--border);
+  background: rgba(251, 245, 239, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.brand-name {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 17px;
+}
+
+.home-link {
+  color: var(--dim);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.home-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Main content */
+main {
+  padding-block: clamp(28px, 6vw, 56px);
+}
+
+.doc-header {
+  margin-bottom: 20px;
+}
+
+.doc-header h1 {
+  font-size: clamp(28px, 4vw, 36px);
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+.doc-header .subtitle {
+  color: var(--muted);
+  margin: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3vw, 26px);
+  margin-bottom: 18px;
+}
+
+.card.overview {
+  background: var(--surface-soft);
+  border-color: rgba(232, 84, 63, 0.18);
+}
+
+.card.overview h2 {
+  margin-top: 0;
+}
+
+.prose h2 {
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+}
+
+.prose h3 {
+  font-size: 16px;
+  margin: 16px 0 6px;
+}
+
+.prose p {
+  color: var(--muted);
+  margin: 8px 0;
+}
+
+.prose ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.prose li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--muted);
+}
+
+.prose li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.emphasis {
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.link {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding-block: 26px;
+  color: var(--dim);
+  font-size: 14px;
+}
+
+.footer-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-tagline {
+  margin: 0;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right div + div {
+  margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}
