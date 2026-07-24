@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FBF5EF" />
+
+    <title>Pomello — Focused Work Timer</title>
+    <meta
+      name="description"
+      content="Pomello helps you do your best work, one session at a time. A Pomodoro timer with plans, streaks, and a live lock screen countdown. Free for iPhone, iPad, and Mac."
+    />
+
+    <meta property="og:title" content="Pomello — Focused Work Timer" />
+    <meta
+      property="og:description"
+      content="A Pomodoro timer with plans, streaks, and a live lock screen countdown. No accounts. No ads. Free."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Landing page extras */
+      .hero {
+        text-align: center;
+        padding-block: clamp(40px, 8vw, 80px) clamp(28px, 5vw, 48px);
+      }
+
+      .hero-icon {
+        width: 96px;
+        height: 96px;
+        margin-inline: auto;
+        margin-bottom: 24px;
+        border-radius: 22px;
+        background: var(--primary);
+        display: grid;
+        place-items: center;
+        box-shadow: 0 12px 32px rgba(232, 84, 63, 0.35);
+      }
+
+      .hero-icon svg {
+        width: 56px;
+        height: 56px;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 6vw, 54px);
+        letter-spacing: -0.03em;
+        margin: 0 0 12px;
+        line-height: 1.1;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+      }
+
+      .hero .tagline {
+        font-size: clamp(16px, 2.5vw, 19px);
+        color: var(--muted);
+        margin: 0 0 32px;
+        max-width: 480px;
+        margin-inline: auto;
+        margin-bottom: 32px;
+      }
+
+      .badge-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .app-store-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 22px;
+        background: var(--text);
+        color: #fff;
+        border-radius: var(--radius-sm);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: -0.01em;
+        transition: background var(--fast) var(--ease), transform var(--fast) var(--ease);
+      }
+
+      .app-store-badge:hover {
+        background: #111;
+        transform: translateY(-1px);
+      }
+
+      .app-store-badge svg {
+        flex: none;
+      }
+
+      .platform-pill {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--dim);
+        padding: 8px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--surface);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .feature-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: clamp(18px, 3vw, 24px);
+      }
+
+      .feature-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--surface-soft);
+        display: grid;
+        place-items: center;
+        margin-bottom: 14px;
+        font-size: 22px;
+      }
+
+      .feature-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin: 0 0 6px;
+      }
+
+      .feature-card p {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .privacy-banner {
+        background: var(--surface-soft);
+        border: 1px solid rgba(232, 84, 63, 0.18);
+        border-radius: var(--radius);
+        padding: clamp(18px, 3vw, 24px);
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .privacy-banner p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .privacy-banner strong {
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" role="banner">
+      <div class="container topbar-inner">
+        <a class="brand" href="#main" aria-label="Pomello">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M8.4 5.2c1-1 2.3-1.6 3.6-1.6s2.6.6 3.6 1.6"
+                stroke="#4f9d6e"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <circle cx="12" cy="14" r="8.2" fill="#e8543f" />
+              <path
+                d="M8.4 12.2c.7-2.6 2-4 3.6-4s2.9 1.4 3.6 4"
+                stroke="rgba(255,255,255,0.35)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="brand-name">Pomello</span>
+        </a>
+        <a class="home-link" href="../index.html">Software Playroom ↗</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+          <div class="hero-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M8.4 5.2c1-1 2.3-1.6 3.6-1.6s2.6.6 3.6 1.6"
+                stroke="#4f9d6e"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <circle cx="12" cy="14" r="8.2" fill="rgba(255,255,255,0.92)" />
+              <path
+                d="M8.4 12.2c.7-2.6 2-4 3.6-4s2.9 1.4 3.6 4"
+                stroke="rgba(232,84,63,0.3)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <h1>Focus deeper.<br /><span>Do more.</span></h1>
+          <p class="tagline">
+            Pomello is a Pomodoro timer with plans, streaks, and a live lock screen countdown — built for iPhone, iPad, and Mac.
+          </p>
+          <div class="badge-row">
+            <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              Download on the App Store
+            </a>
+            <span class="platform-pill">iPhone · iPad · Mac</span>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🍅</div>
+            <h3>Pomodoro Timer</h3>
+            <p>Work in focused intervals with automatic breaks. Customise session length, break duration, and long break frequency to match your flow.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>Plans & Today View</h3>
+            <p>Build reusable Plans for your projects, then import them into Today. Check tasks off as you work — progress syncs back automatically.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Live Lock Screen</h3>
+            <p>A Live Activity keeps your countdown visible on the lock screen and Dynamic Island — no need to unlock your phone to check the time.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔥</div>
+            <h3>Streaks & Stats</h3>
+            <p>Hit your daily focus goal to build a streak. Your weekly progress is always visible at a glance on the Home screen.</p>
+          </div>
+        </div>
+
+        <!-- Privacy -->
+        <div class="privacy-banner">
+          <div style="font-size: 28px; flex: none;">🔐</div>
+          <p>
+            <strong>Private by design.</strong> No accounts, no analytics, no ads. Everything you enter stays on your device and never leaves it.
+          </p>
+          <a class="link" href="./privacy.html" style="white-space: nowrap;">Privacy Policy ↗</a>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <p class="footer-tagline">No accounts. No servers. No data leaves your device.</p>
+        <div class="footer-right">
+          <div>
+            <a class="link" href="./support.html">Support</a>
+            &nbsp;·&nbsp;
+            <a class="link" href="./privacy.html">Privacy</a>
+            &nbsp;·&nbsp;
+            <a class="link" href="../index.html">Software Playroom</a>
+          </div>
+          <div>© <span id="year"></span> Pomello</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
